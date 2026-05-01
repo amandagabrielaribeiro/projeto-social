@@ -1,48 +1,75 @@
 @charset "UTF-8";
 
-* {
+*   {
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box; /* Ajuda a manter o tamanho correto com paddings */
+    font-family: Arial, Helvetigreenca, sans-serif;
+
 }
 
-html, body {
-    height: 100vh;
-    width: 100vw;
-}
 
-body {
-    /* Centralização usando Flexbox */
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    
-    background: url('../imagens/fundo-madeira.jpg') no-repeat center center;  
-    background-size: cover;
-    background-attachment: fixed;
-}
+    html, body {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
 
-section#telefone {
+
+    }
+
+    body {
+        background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+main {
     position: relative;
-    /* Usando vh para o celular diminuir em telas menores */
-    height: 90vh; 
-    min-height: 400px;
-    max-height: 700px;
+    height: 100vh;
     
-    /* Mantém a proporção largura/altura do iPhone */
-    aspect-ratio: 311 / 627; 
-    
-    background: url('../imagens/frame-iphone.png') no-repeat center center;
-    background-size: contain;
+}
+ section#telefone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50% );
+
+    height: 627px;
+    width: 322px;
+    background: url('../imagens/frame-iphone.png') no-repeat
+
+
+ }
+
+
+iframe#tela  {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 269px;
+    height: 471px;
+
 }
 
-iframe#tela {
-    position: absolute;
-    /* Ajustes em porcentagem para o iframe acompanhar o redimensionamento do celular */
-    top: 12.8%; 
-    left: 7%;
-    width: 86.5%;
-    height: 75.2%;
-    border: none;
+
+
+section#redes-sociais {
+    text-align: right;
+
 }
+    section#redes-sociais img {
+        width: 50px;
+        margin: 10px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.404);
+
+
+    }
+        section#redes-sociais img:hover {
+            border: 2px solid rgba(255, 255, 255, 0.637);
+            transform: translate(-3px, -3px);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
+            transition: transform .3s border 1s;
+
+        }
+
+
